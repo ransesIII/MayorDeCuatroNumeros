@@ -2,18 +2,15 @@
 def main():
     #try:
         N = input(f'ingresa 4 numeros cualesquiera: ')
-        delimiter = ','
+        delimiter = ' '
         numero = N.split(delimiter)
-        numero.sort()
-        #print(f'Escribiste los siguientes numeros {numero}')
+        
+        numero_2 = list(map(int, numero)) # En Python, la función map nos permite aplicar una función sobre los items de un objeto iterable, sintaxis: map(function, objeto iterable)
+        numero_2.sort()
+        print(f'Escribiste los siguientes numeros {numero}')
 
-        salida = numero[3]
+        salida = numero_2[3]
         print(f'El {salida} es el mayor')
-
-        #for i in numero:
-        #    #print(i)
-        #    if i >= N[0] and >= N[1] >= N[2] >= N[3]:
-        #        print(f'{i} es mayor')
        
     #except:
     #    print('Ingresa solo numeros')
